@@ -20,6 +20,4 @@ from django.urls import path, include
 urlpatterns = [
     path("notes/", include("notes.urls")),
     path('admin/', admin.site.urls),
-    path('record/', recordView.as_view()),
-    path('AIView/', AIView.as_view()),
 ]
