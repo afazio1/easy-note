@@ -19,4 +19,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('record/', recordView.as_view()),
+    path('AIView/', AIView.as_view()),
 ]
