@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie"
+import './styles.css'; // Import the CSS file
 
 export default function SidePage(props) {
     const { transcript } = props;
@@ -29,15 +30,19 @@ export default function SidePage(props) {
     return (
         <main className="flex flex-col gap-4 justify-center text-white">
             <section className="flex flex-row gap-4 justify-center">
-                <section className="flex flex-col justify-start w-[50%] m-4">
-                    <h1 className="lg:text-2xl text-blue-200">Raw Text</h1>
-                    <p>{ transcript }</p>
+                <section className="flex flex-col justify-center w-[50%] m-4">
+                  <h1 className="text-lg" style={{ color: 'white', fontFamily: 'Arial', fontSize: '24px' }}>Raw Text</h1>
+                  <div className="fixed-section">
+                      <p style={{ color: 'white', fontFamily: 'Helvetica, sans-serif', fontSize: '18px' }}>{transcript}</p>
+                  </div>
                 </section>
-                <section className="flex flex-col justify-start m-4 w-[50%]">
-                    <h1 className="lg:text-2xl text-blue-200">AI Text</h1>
-                    <p>{ loading ? "loading..." : aiText }</p>
+                <section className="flex flex-col justify-center w-[50%] m-4">
+                    <h1 className="text-lg" style={{ color: 'white', fontFamily: 'Arial', fontSize: '24px' }}>AI Text</h1>
+                    <div className="fixed-section">
+                      <p style={{ color: 'white', fontFamily: 'Helvetica, sans-serif', fontSize: '18px' }}>{ loading ? "loading..." : aiText }</p>
+                    </div>
                 </section>
             </section>
         </main>
-    )
+    );
 }

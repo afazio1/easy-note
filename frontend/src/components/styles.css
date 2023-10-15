@@ -1,0 +1,39 @@
+/* styles.css */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px; /* Adjust this value for your desired padding */
+}
+
+.fixed-section {
+    position: fixed;
+    top: 10px;
+    /* Remove left and add width */
+    width: calc(33.33% - 20px); /* Adjust the width and padding for your desired spacing */
+    /* Additional styles */
+}
+
+.left-section {
+    position: fixed;
+    top: 50px;
+    left: 400px; /* Adjust the left value for spacing from the left border */
+
+    @media (max-width: 768px) {
+        /* Adjust styles for smaller screens */
+        top: 50;
+        left: 10px;
+    }
+}
+
+.center-section {
+    position: fixed;
+    top: 50px;
+    /* Remove left and add width */
+    width: calc(33.33% - 20px);
+}
+
+.right-section {
+    top: 50px;
+    left: calc(66.66% - 10px);
+}
