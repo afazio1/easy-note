@@ -1,4 +1,4 @@
-
+import './styles.css'; // Import the CSS file
 
 export default function SidePage(props) {
     const { transcript } = props;
@@ -7,14 +7,18 @@ export default function SidePage(props) {
         <main className="flex flex-col gap-4 justify-center">
             <section className="flex flex-row gap-4 justify-center">
                 <section className="flex flex-col justify-center min-w-[50%] m-4">
-                    <h1 className="text-lg">Raw Text</h1>
-                    <p>{ transcript }</p>
+                <h1 className="text-lg" style={{ color: 'white', fontFamily: 'Arial', fontSize: '24px' }}>Raw Text</h1>
+                    <div className="fixed-section">
+                    <p style={{ color: 'white', fontFamily: 'Helvetica, sans-serif', fontSize: '18px' }}>{transcript}</p>
+                    </div>
                 </section>
                 <section className="flex flex-col justify-center m-4">
-                    <h1 className="text-lg">AI Text</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ea, delectus ex vel temporibus dolore suscipit repellat consectetur officiis non molestias hic reiciendis ab libero inventore maiores dolorum quia fugiat.</p>
-                </section>
+                <h1 className="text-lg" style={{ color: 'white', fontFamily: 'Arial', fontSize: '24px' }}>AI Text</h1>
+                    <div className="fixed-section">
+                    <p style={{ color: 'white', fontFamily: 'Helvetica, sans-serif', fontSize: '18px' }}>words words</p>
+                    </div>
+                </section>a
             </section>
         </main>
-    )
+    );
 }
