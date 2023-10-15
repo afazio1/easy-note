@@ -16,9 +16,9 @@ const Dictaphone = () => {
   }
 
   return (
-    <div class="not-live">
+    <div>
       <p className='lg:text-3xl my-5 text-white'>Microphone: {listening ? 'on' : 'off'}</p>
-      <nav className="bg-blue-500 p-4">
+      <nav className="bg-lighter-grey p-4">
         <div className="container mx-auto flex justify-center items-center">
             <div className="space-x-10">
               {/* Start, Stop, Reset */}
@@ -28,7 +28,8 @@ const Dictaphone = () => {
             </div>
         </div>
       </nav>
-      <p className='text-white lg:text-xl my-5'>{transcript}</p>
+
+      <p className='text-white lg:text-2xl my-5'>{transcript}</p>
     </div>
   );
 };
