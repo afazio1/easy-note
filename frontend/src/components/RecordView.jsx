@@ -23,7 +23,7 @@ const Dictaphone = () => {
   if (aiToggle) {
     return (
       <>
-        <button onClick={handleToggle}>Back to Raw</button>
+        <button className="text-white p-4 hover:text-blue-200" onClick={handleToggle}>Back to Raw</button>
         <SidePage transcript={transcript} />
       </>
     )
@@ -31,7 +31,7 @@ const Dictaphone = () => {
 
   return (
     <div>
-      <p className='lg:text-3xl my-5 text-white'>Microphone: {listening ? 'on' : 'off'}</p>
+      <p className='lg:text-3xl my-5 text-white p-4'>Microphone: {listening ? 'on' : 'off'}</p>
       <nav className="bg-lighter-grey p-4">
         <div className="container mx-auto flex justify-center items-center">
             <div className="space-x-10">
@@ -43,7 +43,9 @@ const Dictaphone = () => {
             </div>
         </div>
       </nav>
-      <p className='text-white lg:text-2xl my-5'>{transcript}</p>
+      <section className='flex flex-col items-center'>
+        <p className='text-white lg:text-2xl my-5 max-w-[50%]'>{transcript}</p>
+      </section>
     </div>
   );
 };
