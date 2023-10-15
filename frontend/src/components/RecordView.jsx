@@ -23,29 +23,11 @@ const Dictaphone = () => {
   if (aiToggle) {
     return (
       <>
-        <button onClick={handleToggle}>Back to Raw</button>
+        <button className="text-white p-4 hover:text-blue-200" onClick={handleToggle}>Back to Raw</button>
         <SidePage transcript={transcript} />
       </>
     )
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   return (
     <div>
@@ -62,8 +44,10 @@ const Dictaphone = () => {
             </div>
         </div>
       </nav>
-      <p className='text-center font-custom lg:text-3xl text-white flex justify-center py-8'>Microphone: {listening ? 'On' : 'Off'}</p>
-      <p className='font-custom text-white lg:text-2xl my-5 py-10 px-60'>{transcript}</p>
+      <section className='flex flex-col items-center'>
+        <p className='text-center font-custom lg:text-3xl text-white py-8'>Microphone: {listening ? 'On' : 'Off'}</p>
+        <p className='font-custom text-white lg:text-2xl my-5 max-w-[50%]'>{transcript}</p>
+      </section>
     </div>
   );
 };
