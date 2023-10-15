@@ -1,12 +1,15 @@
 import './App.css';
 import RecordView from './components/RecordView';
+import { Route, Routes } from 'react-router-dom';
+import SidePage from './components/SidePage';
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Easy Note</h1>
-      <RecordView />
-    </div>
+    <Routes>
+      <Route path="/" element={<RecordView />} />
+      <Route path="/side" element={<SidePage />} />
+    </Routes>
   );
 }
 
